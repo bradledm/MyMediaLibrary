@@ -16,7 +16,7 @@
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -34,6 +34,11 @@
     margin-left: 50px;
 }
     
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+    
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -43,10 +48,12 @@
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
 }
 </script>
          
@@ -58,11 +65,11 @@ function closeNav() {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <ul style="list-style-type:none">
-  <li><a onclick='loadContent(1);' href="index.html">Home</a></li>
-  <li><a onclick='loadContent(1);' href="eBooks.html">eBooks</a></li>
-  <li><a onclick='loadContent(2);' href="games.html">Games</a></li>
-  <li><a onclick='loadContent(3);' href="movies.html">Movies</a></li>
-  <li><a onclick='loadContent(4);' href="music.html">Music</a></li>
-  <li><a onclick='loadContent(5);' href="pictures.html">Pictures</a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a onclick='loadContent(1);' href="content1.html">eBooks</a></li>
+  <li><a onclick='loadContent(2);' href="content2.html">Games</a></li>
+  <li><a onclick='loadContent(3);' href="content3.html">Movies</a></li>
+  <li><a onclick='loadContent(4);' href="content4.html">Music</a></li>
+  <li><a onclick='loadContent(5);' href="content5.html">Pictures</a></li>
 </ul>
 </div>

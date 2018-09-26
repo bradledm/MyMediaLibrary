@@ -12,7 +12,7 @@
 
       #content {
         float:left;
-        background-color: red;
+        background-color: darkorange;
         height: 100%;
         width: 70%;
       }
@@ -23,7 +23,7 @@
   <div id='sidebar'>
   </div>
 
-  <div id='content'>
+  <div id='main'>
   </div>
 
 <script>
@@ -50,8 +50,6 @@ function closeNav() {
         document.getElementById('sidebar').innerHTML = xhr.response;
       }
     }
-
-
 
     function loadContent(contentID){
       var xhr_content = new XMLHttpRequest();
