@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="main.css">
+<head>
+    
+<style>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: "Verdana";
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+    
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+    
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    
+</style>
+    
+</head>
+
+<body>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<div>
+<a id="page_1" href="#">Page 1</a>
+<a id="page_2" href="#">Page 2</a>
+<a id="page_3" href="#">Page 3</a>
+<a id="page_4" href="#">Page 4</a>
+
+</div>
+<div style="display:none;" id="page_1_div">
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Enter eBook Details</h2>
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="eBook Title" name="songTitle">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="eBook Author" name="artist">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="eBook genre" name="albumName">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Copyright Year" name="year">
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>
+</div>
+<div style="display:none;" id="page_2_div">
+page 2
+</div>
+<div style="display:none;" id="page_3_div">
+page 3
+</div>
+<div style="display:none;" id="page_4_div">
+page 4
+</div>    
+    
+<script>
+    
+function get(id) {return document.getElementById(id);}
+var page = 1;
+
+update();
+    
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+window.onclick = function(e) {
+	e.preventDefault();
+	if (e.target.id == "page_1") {
+		page = 1;
+	}
+	if (e.target.id == "page_2") {
+		page = 2;
+	}
+	if (e.target.id == "page_3") {
+		page = 3;
+	}
+	if (e.target.id == "page_4") {
+		page = 4;
+	}
+	update();
+}
+
+function update() {
+	if (page == 1) {
+		get('page_1_div').style.display = "block";
+	} else {
+		get('page_1_div').style.display = "none";
+	}
+	if (page == 2) {
+		get('page_2_div').style.display = "block";
+	} else {
+		get('page_2_div').style.display = "none";
+	}
+	if (page == 3) {
+		get('page_3_div').style.display = "block";
+	} else {
+		get('page_3_div').style.display = "none";
+	}
+	if (page == 4) {
+		get('page_4_div').style.display = "block";
+	} else {
+		get('page_4_div').style.display = "none";
+	}
+}  
+    
+    
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<ul style="list-style-type:none">
+  <li><a href="#home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+  <li><a onclick='loadContent(1);' href="content1.html">eBooks</a></li>
+  <li><a onclick='loadContent(2);' href="content2.html">Games</a></li>
+  <li><a onclick='loadContent(3);' href="content3.html">Movies</a></li>
+  <li><a onclick='loadContent(4);' href="content4.html">Music</a></li>
+  <li><a onclick='loadContent(5);' href="content5.html">Pictures</a></li>
+</ul>
+
+
+    
+</div>
+</body>
+
+</html>

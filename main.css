@@ -42,7 +42,7 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: bold;
     background-color: coral;
-    background-image: url("images/joseph-pearson-352145-unsplash.jpg");
+    <!-- background-image: url("images/joseph-pearson-352145-unsplash.jpg"); -->
 }
 
 h1 {
