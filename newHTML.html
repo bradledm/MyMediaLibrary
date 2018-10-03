@@ -4,8 +4,12 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    
+    
 <link rel="stylesheet" href="main.css">
 <head>
     
@@ -67,34 +71,35 @@
 <a id="page_1" href="#">Page 1</a>
 <a id="page_2" href="#">Page 2</a>
 <a id="page_3" href="#">Page 3</a>
-<a id="page_4" href="#">Page 4</a>
+<a id="page_4" href="#">Page 4</a>s
 <a id="page_5" href="#">Page 5</a>
 <a id="page_5" href="#">Page 6</a>
 </div> -->
 <div style="display:none;" id="page_1_div">
 <h1>My Media Library</h1>
+<h2>This site allows you to manage your media</h2>
 </div>
     
 <div style="display:none;" id="page_2_div">
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter eBook Details</h2>
   <div class="input-container">
-    <i class="fa fa-book"></i>
+    <i class="fa fa-book icon"></i>
     <input class="input-field" type="text" placeholder="eBook Title" name="songTitle">
   </div>
 
   <div class="input-container">
-    <i class="fa fa-book"></i>
+    <i class="fa fa-book icon"></i>
     <input class="input-field" type="text" placeholder="eBook Author" name="artist">
   </div>
   
   <div class="input-container">
-    <i class="fa fa-book"></i>
+    <i class="fa fa-book icon"></i>
     <input class="input-field" type="text" placeholder="eBook genre" name="albumName">
   </div>
 
   <div class="input-container">
-    <i class="fa fa-book"></i>
+    <i class="fa fa-book icon"></i>
     <input class="input-field" type="text" placeholder="Copyright Year" name="year">
   </div>
 
@@ -105,22 +110,22 @@
     <form action="/action_page.php" style="max-width:500px;margin:auto">
         <h2>Enter Game Details</h2>
         <div class="input-container">
-            <i class="fa fa-gamepad"></i>
+            <i class="fa fa-gamepad icon"></i>
             <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
         </div>
 
         <div class="input-container">
-            <i class="fa fa-gamepad"></i>
+            <i class="fa fa-gamepad icon"></i>
             <input class="input-field" type="text" placeholder="Artist" name="artist">
         </div>
   
         <div class="input-container">
-            <i class="fa fa-gamepad"></i>
+            <i class="fa fa-gamepad icon"></i>
             <input class="input-field" type="text" placeholder="Album Name" name="albumName">
         </div>
 
         <div class="input-container">
-            <i class="fa fa-gamepad"></i>
+            <i class="fa fa-gamepad icon"></i>
             <input class="input-field" type="text" placeholder="Album Year" name="year">
         </div>
 
@@ -132,22 +137,22 @@
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter Movie Details</h2>
   <div class="input-container">
-    <i class="fa fa-video-camera"></i>
+    <i class="fab fa-youtube icon"></i>
     <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
   </div>
 
   <div class="input-container">
-    <i class="fa fa-video-camera"></i>
+    <i class="fab fa-youtube icon"></i>
     <input class="input-field" type="text" placeholder="Artist" name="artist">
   </div>
   
   <div class="input-container">
-    <i class="fa fa-video-camera"></i>
+    <i class="fab fa-youtube icon"></i>
     <input class="input-field" type="text" placeholder="Album Name" name="albumName">
   </div>
 
   <div class="input-container">
-    <i class="fa fa-video-camera"></i>
+    <i class="fab fa-youtube icon"></i>
     <input class="input-field" type="text" placeholder="Album Year" name="year">
   </div>
 
@@ -188,22 +193,22 @@
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter Picture Details</h2>
   <div class="input-container">
-    <i class="fa fa-camera"></i>
+    <i class="fa fa-camera icon"></i>
     <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
   </div>
 
   <div class="input-container">
-    <i class="fa fa-camera"></i>      
+    <i class="fa fa-camera icon"></i>      
     <input class="input-field" type="text" placeholder="Artist" name="artist">
   </div>
   
   <div class="input-container">
-    <i class="fa fa-camera"></i>
+    <i class="fa fa-camera icon"></i>
     <input class="input-field" type="text" placeholder="Album Name" name="albumName">
   </div>
 
   <div class="input-container">
-    <i class="fa fa-camera"></i>
+    <i class="fa fa-camera icon"></i>
     <input class="input-field" type="text" placeholder="Album Year" name="year">
   </div>
 
@@ -219,13 +224,14 @@ var page = 1;
 update();
     
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("main").style.marginLeft = "100px";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+
 }
 
 window.onclick = function(e) {
@@ -290,12 +296,12 @@ function update() {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <ul style="list-style-type:none">
-  <li><a id="page_1" href="#"><i class="fa fa-fw fa-home"></i>Home</a></li>
-    <li><a id="page_2" href="#"><i class="fa fa-book"></i>eBooks</a></li>  
-    <li><a id="page_3" href="#"><i class="fa fa-gamepad"></i>Games</a></li>
-    <li><a id="page_4" href="#"><i class="fa fa-video-camera"></i>Movies</a></li>
+  <li><a id="page_1" href="#"><i class="fa fa-fw fa-home icon"></i>Home</a></li>
+    <li><a id="page_2" href="#"><i class="fa fa-book icon"></i>eBooks</a></li>  
+    <li><a id="page_3" href="#"><i class="fa fa-gamepad icon"></i>Games</a></li>
+    <li><a id="page_4" href="#"><i class="fab fa-youtube icon"></i>Movies</a></li>
     <li><a id="page_5" href="#"><i class="fa fa-music icon"></i>Music</a></li>
-    <li><a id="page_6" href="#"><i class="fa fa-camera"></i>Pictures</a></li>
+    <li><a id="page_6" href="#"><i class="fa fa-camera icon"></i>Pictures</a></li>
 </ul>
 </div>
 </body>
