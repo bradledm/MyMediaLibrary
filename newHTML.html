@@ -63,15 +63,19 @@
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-<div>
+<!-- <div>
 <a id="page_1" href="#">Page 1</a>
 <a id="page_2" href="#">Page 2</a>
 <a id="page_3" href="#">Page 3</a>
 <a id="page_4" href="#">Page 4</a>
 <a id="page_5" href="#">Page 5</a>
-
-</div>
+<a id="page_5" href="#">Page 6</a>
+</div> -->
 <div style="display:none;" id="page_1_div">
+<h1>My Media Library</h1>
+</div>
+    
+<div style="display:none;" id="page_2_div">
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter eBook Details</h2>
   <div class="input-container">
@@ -97,7 +101,7 @@
   <button type="submit" class="btn">Submit</button>
 </form>
 </div>
-<div style="display:none;" id="page_2_div">
+<div style="display:none;" id="page_3_div">
     <form action="/action_page.php" style="max-width:500px;margin:auto">
         <h2>Enter Game Details</h2>
         <div class="input-container">
@@ -123,7 +127,7 @@
         <button type="submit" class="btn">Submit</button>
     </form>
 </div>
-<div style="display:none;" id="page_3_div">
+<div style="display:none;" id="page_4_div">
 
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter Movie Details</h2>
@@ -151,7 +155,7 @@
 </form>
 </div>
 
-<div style="display:none;" id="page_4_div">
+<div style="display:none;" id="page_5_div">
 
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter Music Details</h2>
@@ -179,7 +183,7 @@
 </form>
 </div>    
 
-<div style="display:none;" id="page_5_div">
+<div style="display:none;" id="page_6_div">
 
 <form action="/action_page.php" style="max-width:500px;margin:auto">
   <h2>Enter Picture Details</h2>
@@ -231,7 +235,7 @@ window.onclick = function(e) {
 	}
 	if (e.target.id == "page_2") {
 		page = 2;
-	}
+    }
 	if (e.target.id == "page_3") {
 		page = 3;
 	}
@@ -240,6 +244,9 @@ window.onclick = function(e) {
 	}
     if (e.target.id == "page_5") {
         page = 5;
+	}
+    if (e.target.id == "page_6") {
+        page = 6;
 	}
 	update();
 }
@@ -270,6 +277,11 @@ function update() {
 	} else {
 		get('page_5_div').style.display = "none";
 	}
+	if (page == 6) {
+		get('page_6_div').style.display = "block";
+	} else {
+		get('page_6_div').style.display = "none";
+	}
 }  
     
     
@@ -278,12 +290,12 @@ function update() {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <ul style="list-style-type:none">
-  <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
-  <li><a onclick='loadContent(1);' href="content1.html">eBooks</a></li>
-  <li><a onclick='loadContent(2);' href="content2.html">Games</a></li>
-  <li><a onclick='loadContent(3);' href="content3.html">Movies</a></li>
-  <li><a onclick='loadContent(4);' href="content4.html">Music</a></li>
-  <li><a onclick='loadContent(5);' href="content5.html">Pictures</a></li>
+  <li><a id="page_1" href="#"><i class="fa fa-fw fa-home"></i>Home</a></li>
+    <li><a id="page_2" href="#"><i class="fa fa-book"></i>eBooks</a></li>  
+    <li><a id="page_3" href="#"><i class="fa fa-gamepad"></i>Games</a></li>
+    <li><a id="page_4" href="#"><i class="fa fa-video-camera"></i>Movies</a></li>
+    <li><a id="page_5" href="#"><i class="fa fa-music icon"></i>Music</a></li>
+    <li><a id="page_6" href="#"><i class="fa fa-camera"></i>Pictures</a></li>
 </ul>
 </div>
 </body>
