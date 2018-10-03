@@ -68,6 +68,7 @@
 <a id="page_2" href="#">Page 2</a>
 <a id="page_3" href="#">Page 3</a>
 <a id="page_4" href="#">Page 4</a>
+<a id="page_5" href="#">Page 5</a>
 
 </div>
 <div style="display:none;" id="page_1_div">
@@ -97,14 +98,114 @@
 </form>
 </div>
 <div style="display:none;" id="page_2_div">
-page 2
+    <form action="/action_page.php" style="max-width:500px;margin:auto">
+        <h2>Enter Game Details</h2>
+        <div class="input-container">
+            <i class="fa fa-music icon"></i>
+            <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
+        </div>
+
+        <div class="input-container">
+            <i class="fa fa-music icon"></i>
+            <input class="input-field" type="text" placeholder="Artist" name="artist">
+        </div>
+  
+        <div class="input-container">
+            <i class="fa fa-music icon"></i>
+            <input class="input-field" type="text" placeholder="Album Name" name="albumName">
+        </div>
+
+        <div class="input-container">
+            <i class="fa fa-music icon"></i>
+            <input class="input-field" type="text" placeholder="Album Year" name="year">
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
 </div>
 <div style="display:none;" id="page_3_div">
-page 3
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Enter Movie Details</h2>
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Artist" name="artist">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Name" name="albumName">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Year" name="year">
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>
 </div>
+
 <div style="display:none;" id="page_4_div">
-page 4
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Enter Music Details</h2>
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Artist" name="artist">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Name" name="albumName">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Year" name="year">
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>
 </div>    
+
+<div style="display:none;" id="page_5_div">
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Enter Picture Details</h2>
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Artist" name="artist">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Name" name="albumName">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Year" name="year">
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>
+</div>
     
 <script>
     
@@ -137,6 +238,9 @@ window.onclick = function(e) {
 	if (e.target.id == "page_4") {
 		page = 4;
 	}
+    if (e.target.id == "page_5") {
+        page = 5;
+	}
 	update();
 }
 
@@ -160,6 +264,11 @@ function update() {
 		get('page_4_div').style.display = "block";
 	} else {
 		get('page_4_div').style.display = "none";
+	}
+	if (page == 5) {
+		get('page_5_div').style.display = "block";
+	} else {
+		get('page_5_div').style.display = "none";
 	}
 }  
     
